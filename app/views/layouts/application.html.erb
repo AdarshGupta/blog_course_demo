@@ -10,7 +10,8 @@
 </head>
 <body>
 	<header id="main_navigation" class="clearfix">
-  		<a href="#" class="name">Adarsh Gupta</a>
+    <%= link_to "Adarsh Gupta", root_path, class: "name" %>
+  		<!-- <a href="#" class="name">Adarsh Gupta</a> -->
   		<nav>
   			<%= link_to "Articles", posts_path %>
   		<a href="articles.html">Articles</a>
@@ -20,6 +21,17 @@
   	</header>
 
 <%= yield %>
+
+<footer id="main_footer">
+      <p class="copyright">&copy;2015 Adarsh Gupta</p>
+      <nav>
+        <div class="social">
+      <a href="http://twitter.com/adarsh035" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="http://github.com/AdarshGupta" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.google.com/+AdarshGupta035" target="_blank"><i class="fa fa-google-plus"></i></a>
+    </div>
+    </nav>
+    </footer>
 
 </body>
 </html>
