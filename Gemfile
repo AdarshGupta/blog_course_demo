@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
@@ -25,3 +25,18 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3.3'
+
+group :development, :test do 
+	gem 'byebug'
+	gem 'web-console', '~>2.0'
+	gem 'spring'	
+end
+
+group :development do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
