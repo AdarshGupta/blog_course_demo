@@ -17,9 +17,16 @@
   		  <!-- <a href="articles.html">Articles</a> -->
         <%= link_to "Projects", projects_path %>
         <!-- <a href="projects.html">Projects</a> -->
-        <a href="contact.html">Contact</a>
+        <%= link_to "Contact", new_contact_path %>
+        <!-- <a href="contact.html">Contact</a> -->
   		</nav>
   	</header>
+
+<% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
 
 <%= yield %>
 
